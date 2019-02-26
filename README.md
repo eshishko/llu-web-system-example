@@ -1,4 +1,4 @@
-# Course work in LLU Web Systems Development
+# Coursework for LLU Web Systems Development
 
 [LLU Web Systems Development](https://lais.llu.lv/lluis/kursa_apraksts/GINT6021/2)
 
@@ -11,9 +11,9 @@
     * php bin/console doctrine:migrations:migrate #load DB migration
 
 ## Requirements
-    * php ^7.2
-    * mysql || mariadb
-    * [Symfony Requirements](https://symfony.com/doc/current/reference/requirements.html)
+* php ^7.2
+* mysql || mariadb
+* [Symfony Requirements](https://symfony.com/doc/current/reference/requirements.html)
   
 ## Read more
 
