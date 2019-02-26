@@ -1,0 +1,24 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    App\:
+        resource: '../../src/{Admin/Filters,Twig}*'
+
+    App\Admin\ArticleAdmin:
+        arguments:
+            - ~
+            - App\Entity\Article
+            - ~
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Content', label: 'Article' }
+
+    App\Admin\TagsAdmin:
+        arguments:
+            - ~
+            - App\Entity\ArticleTags
+            - ~
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Content', label: 'Tags' }

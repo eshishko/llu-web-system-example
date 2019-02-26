@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Articles</h1>
+
+    <div>
+        {% for article in articles %}
+            <div>
+                <a href="{{ path('article.show', {'slug': article.slug}) }}">{{ article.title }}</a>
+            </div>
+
+            <div>
+                <p>{{ article.content|slice(0, 250) }}...</p>
+            </div>
+
+            <div>
+                TAGS:
+                {% for tag in article.tags %}
+                    {{ tag.name }}{% if not loop.last %},{% endif %}
+                {% endfor %}
+            </div>
+            <time>{{ article.createdAt|date('d-m-Y H:i') }}</time>
+            <br />
+            <br />
+            <br />
+        {% endfor %}
+    </div>
+{% endblock %}
